@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2E221B;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  background-image: URL(https://res.dvc.land/dvc-web/res/Background.png);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Common */
+
+.alignCenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.textOutline {
+  text-shadow:
+      /* Outline */
+      -2px -2px 0 #000000,
+      2px -2px 0 #000000,
+      -2px 2px 0 #000000,
+      2px 2px 0 #000000,
+      -2px 0 0 #000000,
+      2px 0 0 #000000,
+      0 2px 0 #000000,
+      0 -2px 0 #000000;
+}
+
+.blank20px {
+  height: 20px;
+}
+
+.blank50px {
+  height: 50px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Text Size */
+
+@media screen and (min-width: 1000px) {
+  .textSizeLarge {
+      font-size: 40px;
+  }
+
+  .textSizeMedium {
+      font-size: 30px;
+  }
+
+  .textSizeSmall {
+      font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .textSizeLarge {
+      font-size: 4vw;
+  }
+
+  .textSizeMedium {
+      font-size: 3vw;
+  }
+
+  .textSizeSmall {
+      font-size: 2vw;
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+/* Title */
+
+.titileLogo img {
+  max-width: 35%;
+  max-height: 100px;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Dragon Illust */
+
+.drgaonIllust img {
+  margin-top: 5%;
+
+  /* auto size with fix ratio and limit */
+  max-width: 70%;
+  max-height: 750px;
+  width: auto;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Dragon Field */
+
+.dragonCenter {
+  margin-top: 15%;
+}
+
+.dragonField {
+  position: relative;
+}
+
+.dragonField img {
+  max-width: 80%;
+  max-height: 450px;
+  width: auto;
+  height: auto;
+}
+
+.drgaonDot {
+  width: 80%;
+  height: 80%;
+
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.drgaonEgg {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.dragonShadow {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -2;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.dragonShadow img {
+  opacity: 0.5;
+  max-width: 200%;
+  width: 200%;
+  height: auto;   
+}
+
+.spineCanvas {
+  width: 65%;
+  height: 300%;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.auraBackCanvas {
+  z-index: -1;
+}
+
+.dragonCanvas {
+  z-index: 0;
+}
+
+.auraFrontCanvas {
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Dragon Main Name Tag */
+
+.dragonNicknameContainer {
+  position: absolute;
+  left: 50%;
+  bottom: 22%;
+  transform: translate(-50%, 0%);
+}
+
+.textHoverImage {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dragonNickname {
+  display: block;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.dragonBreedName {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  color: yellow;
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Dragon Get And View Info */
+
+.getAndViewContainer {
+  position: relative;
+  max-width: 598px;
+  width: 70%;
+  margin: auto;
+}
+
+.getAndViewImg {
+  width: 100%;
+  height: auto;
+}
+
+.getDateText {
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 30%;
+  transform: translate(50%, -50%);
+
+  text-align: center;
+  color: #C5D287;
+}
+
+.viewText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  transform: translate(50%, -50%);
+
+  text-align: center;
+  color: #fff;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Nick And Server */
+
+.nickAndServerContainer {
+  display: block;
+  margin: auto;
+}
+
+.nickText {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+
+.serverText {
+  display: block;
+  text-align: center;
+  color: #C5D287;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Bottom store icon etc */
+
+.storeIcon {
+  max-width: 60%;
+  max-height: 400px;
+  height:auto;
+  display: block;
+}
+
+.stores {
+  margin-top: 5%;
+  padding-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  max-width: 500px;
+  max-height: 150px;
+  width: 60%;
+  height: auto;
+}
+
+.storeButton {
+  max-width : 45%;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+}
+
+.storeGoogle {
+  float: left;
+}
+
+.storeApple {
+  float: right;
+}
+
+.storeButton img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------ */
