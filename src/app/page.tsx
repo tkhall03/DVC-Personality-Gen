@@ -13,15 +13,15 @@ export default function Home() {
   }
 
   function loadSpineDragon() {
-    Common.setDragonSpineOrImage()
+    Common.setDragonSpineOrImage("/dianu_01_f_adult_pb");
   }
 
-  useEffect(onLoad);
-{/* <div className='dragonCenter'>
-        <div className='drgaonDot bg-white mt-100'>
-          <canvas className="spineCanvas dragonCanvas bg-slate-600" width="1600" height="1564" onLoad={loadSpineDragon}></canvas>
-        </div>
-      </div> */}
+  useEffect(() => {
+    // call api or anything
+    onLoad();
+    loadSpineDragon();
+    console.log("loaded");
+  },[]);
   return (
       <div id= 'root' className='background'>
         <div className='linkButtonContainer'></div>
@@ -36,7 +36,8 @@ export default function Home() {
             <img className='alignCenter' src="https://res.dvc.land/dvc-web/res/table.png"  alt=""></img>
           </div>
           <div className='drgaonDot'>
-            <canvas id="canvas-dragon" className="spineCanvas dragonCanvas"></canvas>
+            <img id="dragon-image" className='alignCenter' alt="" />
+            <canvas id="canvas-dragon" className="spineCanvas dragonCanvas" width="479" height="856"></canvas>
           </div>
         </div>
       </div>

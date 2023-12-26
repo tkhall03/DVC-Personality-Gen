@@ -23,21 +23,21 @@ export class SpineObject {
         var atlas = assetManager.require(this.atlasUrl);
 
         // Create a AtlasAttachmentLoader that resolves region, mesh, boundingbox and path attachments
-        var atlasLoader = new spine.AtlasAttachmentLoader(atlas);
+        var atlasLoader = (new spine).AtlasAttachmentLoader(atlas);
 
         // Create a SkeletonBinary instance for parsing the .skel file.
-        var skeletonBinary = new spine.SkeletonBinary(atlasLoader);
+        var skeletonBinary = (new spine).SkeletonBinary(atlasLoader);
         this.skeletonBinary = skeletonBinary;
 
         // Set the scale to apply during parsing, parse the file, and create a new skeleton.
         this.applyProperScale()
         skeletonBinary.scale = this.skeletonScale;
         var skeletonData = skeletonBinary.readSkeletonData(assetManager.require(this.binaryUrl));
-        this.skeleton = new spine.Skeleton(skeletonData);
+        this.skeleton = (new spine).Skeleton(skeletonData);
 
         // Create an AnimationState, and set the "run" animation in looping mode.
-        var animationStateData = new spine.AnimationStateData(skeletonData);
-        this.animationState = new spine.AnimationState(animationStateData);
+        var animationStateData = (new spine).AnimationStateData(skeletonData);
+        this.animationState = (new spine).AnimationState(animationStateData);
         if (this.initialAnimation && this.initialAnimation !== "")
             this.animationState.setAnimation(0, this.initialAnimation, true);
     }
