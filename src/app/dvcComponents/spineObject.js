@@ -1,3 +1,5 @@
+import {spine} from './spine-webgl'
+
 export class SpineObject {
     constructor(spineUrl, initialAnimation) {
         this.skeleton = null;

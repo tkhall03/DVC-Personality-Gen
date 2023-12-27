@@ -1,5 +1,4 @@
 import {spine} from './spine-webgl'
-// import './spine-webgl'
 import { SpineObject } from './spineObject'
 
 export class Common {
@@ -33,5 +32,17 @@ export class Common {
             })
         }
         Common.setDragonIllustGrayScale(res_url);
+    }
+
+    static setAuraFront(res_url){
+        new spine.SpineCanvas(document.getElementById("canvas-aura-front"), {
+            app: new SpineObject(res_url, "aura_s_xmas_a")
+        })
+    }
+
+    static setAuraBack(res_url){
+        new spine.SpineCanvas(document.getElementById("canvas-aura-back"), {
+            app: new SpineObject(res_url, "aura_s_xmas_a")
+        })
     }
 }
